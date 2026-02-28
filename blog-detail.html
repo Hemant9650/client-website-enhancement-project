@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>ब्लॉग विवरण | हिंदी और उर्दू साहित्य लेख | शेर-शराबा</title>
+    <meta name="description" content="पढ़ें हिंदी और उर्दू साहित्य, कविता, शायरी और साहित्यिक विषयों पर रोचक लेख और ब्लॉग।">
+    <meta name="keywords" content="हिंदी साहित्य ब्लॉग, उर्दू साहित्य लेख, कविता पर लेख, शायरी विश्लेषण">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .blog-detail-header {
+            background: linear-gradient(135deg, var(--accent-pink), var(--deep-rose));
+            padding: 100px 0 80px;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .blog-detail-category {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 24px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .blog-detail-title {
+            font-size: 48px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .blog-detail-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .blog-detail-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .blog-detail-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .blog-detail-image {
+            width: 100%;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-detail-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .blog-detail-content {
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--dark-text);
+        }
+        
+        .blog-detail-content p {
+            margin-bottom: 25px;
+        }
+        
+        .blog-detail-content h2 {
+            font-size: 32px;
+            margin: 40px 0 20px;
+            font-family: 'Playfair Display', serif;
+            color: var(--accent-pink);
+        }
+        
+        .blog-detail-content h3 {
+            font-size: 24px;
+            margin: 30px 0 15px;
+            font-family: 'Playfair Display', serif;
+            color: var(--deep-rose);
+        }
+        
+        .blog-author-box {
+            background: var(--cream);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 50px 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .blog-author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--rose-pink), var(--primary-pink));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+        
+        .blog-author-info h4 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: var(--dark-text);
+        }
+        
+        .blog-author-info p {
+            color: var(--medium-text);
+            margin: 0;
+        }
+        
+        .blog-share {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 2px solid var(--cream);
+            border-bottom: 2px solid var(--cream);
+        }
+        
+        .blog-share h3 {
+            margin-bottom: 20px;
+            color: var(--dark-text);
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .share-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 20px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .share-btn.facebook { background: #3b5998; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.whatsapp { background: #25d366; }
+        .share-btn.linkedin { background: #0077b5; }
+        
+        .share-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .back-to-blogs {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent-pink);
+            font-weight: 600;
+            margin-bottom: 40px;
+            transition: var(--transition);
+        }
+        
+        .back-to-blogs:hover {
+            color: var(--deep-rose);
+            gap: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-detail-title {
+                font-size: 32px;
+            }
+            
+            .blog-detail-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .blog-detail-image {
+                height: 300px;
+            }
+            
+            .blog-author-box {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Blog Detail Header -->
+    <div class="blog-detail-header">
+        <div class="container">
+            <span class="blog-detail-category" id="blogCategory">साहित्य</span>
+            <h1 class="blog-detail-title" id="blogTitle">ब्लॉग शीर्षक</h1>
+            <div class="blog-detail-meta">
+                <span><i class="fas fa-calendar"></i> <span id="blogDate">2026-01-15</span></span>
+                <span><i class="fas fa-user"></i> <span id="blogAuthor">लेखक का नाम</span></span>
+                <span><i class="fas fa-clock"></i> 5 मिनट पढ़ें</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Detail Content -->
+    <div class="blog-detail-container">
+        <a href="blogs.html" class="back-to-blogs">
+            <i class="fas fa-arrow-left"></i> सभी ब्लॉग पर वापस जाएं
+        </a>
+        
+        <div class="blog-detail-image" id="blogImageContainer">
+            <img id="blogImage" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800" alt="Blog Image">
+        </div>
+        
+        <div class="blog-detail-content" id="blogContent">
+            <!-- Blog content will be loaded here -->
+        </div>
+        
+        <div class="blog-author-box">
+            <div class="blog-author-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="blog-author-info">
+                <h4 id="authorName">लेखक का नाम</h4>
+                <p>शेर-शराबा के नियमित योगदानकर्ता और हिंदी साहित्य के प्रेमी</p>
+            </div>
+        </div>
+        
+        <div class="blog-share">
+            <h3>इस लेख को शेयर करें</h3>
+            <div class="share-buttons">
+                <a href="#" class="share-btn facebook" onclick="shareOnFacebook(); return false;">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="share-btn twitter" onclick="shareOnTwitter(); return false;">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="share-btn whatsapp" onclick="shareOnWhatsApp(); return false;">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="share-btn linkedin" onclick="shareOnLinkedIn(); return false;">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="header-loader.js"></script>
+    <script src="script.js"></script>
+    <script src="blog-detail.js"></script>
+</body>
+</html>

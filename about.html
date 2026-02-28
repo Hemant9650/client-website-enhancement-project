@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>हमारे बारे में | हिंदी उर्दू साहित्य मंच | शेर-शराबा</title>
+    <meta name="title" content="हमारे बारे में | हिंदी उर्दू साहित्य मंच | शेर-शराबा">
+    <meta name="description" content="शेर-शराबा - हिंदी और उर्दू साहित्य को बढ़ावा देने का समर्पित मंच। कवि सम्मेलन, मुशायरा और साहित्यिक कार्यक्रमों का आयोजन।">
+    <meta name="keywords" content="शेर-शराबा, हिंदी साहित्य मंच, उर्दू साहित्य मंच, मुशायरा, कवि सम्मेलन, साहित्यिक कार्यक्रम">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://shersharaba.com/about.html">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, rgba(99, 4, 118, 0.9), rgba(123, 45, 158, 0.9)), 
+                        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200') center/cover;
+            padding: 80px 0 60px;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200') center/cover;
+            opacity: 0.15;
+            animation: subtle-zoom 20s ease-in-out infinite alternate;
+        }
+        
+        @keyframes subtle-zoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        .page-title {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-section {
+            padding: 60px 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .about-content:nth-child(even) {
+            direction: rtl;
+        }
+
+        .about-content:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .about-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            color: var(--dark-text);
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .about-text p {
+            color: var(--medium-text);
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .mission-vision {
+            background: var(--cream);
+            padding: 80px 0;
+            margin: 60px 0;
+        }
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .mv-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .mv-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 35px rgba(99, 4, 118, 0.3);
+        }
+
+        .mv-icon {
+            font-size: 50px;
+            color: var(--accent-pink);
+            margin-bottom: 20px;
+        }
+
+        .mv-card h3 {
+            font-size: 26px;
+            color: var(--dark-text);
+            margin-bottom: 15px;
+        }
+
+        .mv-card p {
+            color: var(--medium-text);
+            line-height: 1.8;
+        }
+
+        .team-section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            color: var(--dark-text);
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .section-header p {
+            color: var(--medium-text);
+            font-size: 18px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .team-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 35px rgba(99, 4, 118, 0.3);
+        }
+
+        .team-image {
+            height: 280px;
+            background: linear-gradient(135deg, var(--rose-pink), var(--primary-pink));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: var(--accent-pink);
+        }
+
+        .team-info {
+            padding: 30px;
+        }
+
+        .team-info h3 {
+            font-size: 24px;
+            color: var(--dark-text);
+            margin-bottom: 8px;
+        }
+
+        .team-info .role {
+            color: var(--accent-pink);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .team-info p {
+            color: var(--medium-text);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, var(--accent-pink), var(--deep-rose));
+            padding: 80px 0;
+            color: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 32px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-content:nth-child(even) {
+                direction: ltr;
+            }
+
+            .about-text h2 {
+                font-size: 28px;
+            }
+
+            .mv-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+<div class="page-header">
+    <div class="container">
+        <h1 class="page-title">Hamare Baare Mein</h1>
+        <p class="page-subtitle">Hindi sahitya ko samarpit ek manch jahan shabdon ka jaadu bikharata hai</p>
+    </div>
+</div>
+
+<!-- Main Content -->
+<main>
+    <!-- About Section -->
+    <section class="about-section container">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800" alt="Sher-Sharaba">
+            </div>
+            <div class="about-text">
+                <h2>Sher-Sharaba Kya Hai?</h2>
+                <p>Sher-Sharaba Hindi sahitya ke prati samarpit ek anokha manch hai jahan kavi, kahaniakar aur sahitya premi ek saath aate hain. Hamara uddeshya Hindi bhasha aur sahitya ko digital yug mein nayi unchaiyon tak pahunchana hai.</p>
+                <p>Yahan aap na keval pratibhashali lekhakon aur unki rachnaon ko khoj sakte hain, balki apni kritiyon ko bhi share kar sakte hain. Hum niyamit roop se open mic events, kavita paath aur sahityik karyakram aayojit karte hain.</p>
+            </div>
+        </div>
+
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800" alt="Sahityik Samuday">
+            </div>
+            <div class="about-text">
+                <h2>Hamari Yatra</h2>
+                <p>Sher-Sharaba ki shuruaat 2024 mein Faridabad aur Noida Extension mein hui thi. Kuch sahitya premiyon ke chhote group se shuru hui yeh pahal aaj ek bade samuday mein badal chuki hai.</p>
+                <p>Aaj hamare manch par saikdon lekhak aur hazaron pathak jude hue hain. Hum har mahine 5+ open mic events aayojit karte hain jahan naye aur anubhavi dono tarah ke kalakar apni pratibha dikha sakte hain.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hamara Lakshya aur Drishtikon</h2>
+                <p>Hum Hindi sahitya ko nayi peedhi tak pahunchane ke liye pratibaddh hain</p>
+            </div>
+
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Hamara Mission</h3>
+                    <p>Hindi sahitya ko digital yug mein punarjeevit karna aur yuva peedhi ko apni bhasha aur sanskriti se jodna.</p>
+                </div>
+
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Hamari Vision</h3>
+                    <p>Bharat ka sabse bada Hindi sahitya manch banna jahan har lekhak ko apni awaaz buland karne ka mauka mile.</p>
+                </div>
+
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Hamare Moolya</h3>
+                    <p>Rachnatmakta, samaveshita, quality aur sahitya ke prati sachcha prem hamare mool moolya hain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Sakriya Lekhak</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2000+</span>
+                    <span class="stat-label">Prakashit Rachnayein</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Karyakram Aayojit</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Sahitya Premi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section container">
+        <div class="section-header">
+            <h2>Hamari Team</h2>
+            <p>Pratibhashali aur samarpit logon ka group jo Sher-Sharaba ko safal banata hai</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-image">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="team-info">
+                    <h3>Rajesh Kumar</h3>
+                    <p class="role">Sansthapak aur Nideshak</p>
+                    <p>Hindi sahitya mein Snatakottar, 15+ varshon ka anubhav</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-image">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <div class="team-info">
+                    <h3>Priya Sharma</h3>
+                    <p class="role">Samagri Pramukh</p>
+                    <p>Prasiddh kavayitri aur lekhika, kai puraskar vijeta</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-image">
+                    <i class="fas fa-user-cog"></i>
+                </div>
+                <div class="team-info">
+                    <h3>Amit Verma</h3>
+                    <p class="role">Takniki Nideshak</p>
+                    <p>10+ varshon ka web development anubhav</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-image">
+                    <i class="fas fa-user-friends"></i>
+                </div>
+                <div class="team-info">
+                    <h3>Sonal Gupta</h3>
+                    <p class="role">Samuday Prabandhak</p>
+                    <p>Event aayojan mein visheshagya, social media expert</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+    <!-- Footer -->
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Custom JavaScript -->
+    <script src="header-loader.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

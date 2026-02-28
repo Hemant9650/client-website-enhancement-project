@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>हिंदी और उर्दू कविता संग्रह | गजल, नज्म, शायरी | शेर-शराबा</title>
+    <meta name="title" content="हिंदी और उर्दू कविता संग्रह | गजल, नज्म, शायरी | शेर-शराबा">
+    <meta name="description" content="हिंदी और उर्दू कविताओं का विशाल संग्रह - गजल, नज्म, शायरी, रुबाई। देवनागरी लिपि में पढ़ें प्रसिद्ध और नए कवियों की बेहतरीन रचनाएं।">
+    <meta name="keywords" content="हिंदी कविता, उर्दू शायरी, गजल संग्रह, नज्म, रुबाई, देवनागरी में उर्दू कविता, शेर, Hindi poetry, Urdu shayari, ghazal collection">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="हिंदी और उर्दू कविता संग्रह | शेर-शराबा">
+    <meta property="og:description" content="गजल, नज्म, शायरी का विशाल संग्रह। देवनागरी में पढ़ें कविताएं।">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://shersharaba.com/kavita.html">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, rgba(99, 4, 118, 0.9), rgba(123, 45, 158, 0.9)), 
+                        url('https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=1200') center/cover;
+            padding: 80px 0 60px;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1516534775068-ba3e7458af70?w=1200') center/cover;
+            opacity: 0.15;
+            animation: subtle-zoom 20s ease-in-out infinite alternate;
+        }
+        
+        @keyframes subtle-zoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        .page-title {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-subtitle {
+            font-size: 18px;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .filters-section {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .filters-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .filters-header h3 {
+            font-size: 22px;
+            color: var(--dark-text);
+        }
+
+        .filters-toggle {
+            background: var(--primary-pink);
+            color: var(--accent-pink);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            display: none;
+        }
+
+        .filters-toggle:hover {
+            background: var(--accent-pink);
+            color: var(--white);
+        }
+
+        .filters-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            color: var(--dark-text);
+            font-size: 14px;
+        }
+
+        .filter-group select,
+        .filter-group input {
+            padding: 10px 15px;
+            border: 2px solid var(--rose-pink);
+            border-radius: 10px;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 14px;
+            color: var(--dark-text);
+            background: var(--cream);
+            transition: var(--transition);
+        }
+
+        .filter-group select:focus,
+        .filter-group input:focus {
+            outline: none;
+            border-color: var(--accent-pink);
+            background: var(--white);
+        }
+
+        .filter-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-filter {
+            background: linear-gradient(135deg, var(--accent-pink), var(--deep-rose));
+            color: var(--white);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .btn-filter:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px var(--shadow);
+        }
+
+        .btn-reset {
+            background: var(--white);
+            color: var(--accent-pink);
+            border: 2px solid var(--accent-pink);
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .btn-reset:hover {
+            background: var(--accent-pink);
+            color: var(--white);
+        }
+
+        .results-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .results-count {
+            color: var(--medium-text);
+            font-weight: 600;
+        }
+
+        .poetry-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 25px var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .poetry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(99, 4, 118, 0.3);
+        }
+
+        .poetry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .poetry-title {
+            font-size: 24px;
+            color: var(--dark-text);
+            margin-bottom: 8px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .poetry-author {
+            color: var(--medium-text);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .poetry-badge {
+            background: linear-gradient(135deg, var(--accent-pink), var(--deep-rose));
+            color: var(--white);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .poetry-excerpt {
+            color: var(--medium-text);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-style: italic;
+            border-left: 3px solid var(--rose-pink);
+            padding-left: 15px;
+        }
+
+        .poetry-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding-top: 20px;
+            border-top: 1px solid var(--cream);
+        }
+
+        .poetry-stats {
+            display: flex;
+            gap: 20px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--medium-text);
+            font-size: 14px;
+        }
+
+        .stat-item i {
+            color: var(--accent-pink);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 5px 25px var(--shadow);
+        }
+
+        .no-results i {
+            font-size: 60px;
+            color: var(--rose-pink);
+            margin-bottom: 20px;
+        }
+
+        .no-results h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--dark-text);
+        }
+
+        .no-results p {
+            color: var(--medium-text);
+        }
+
+        /* List View Styles */
+        .view-list .poetry-card {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .view-list .poetry-header {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        .view-list .poetry-excerpt {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 32px;
+            }
+
+            .filters-toggle {
+                display: block;
+            }
+
+            .filters-content {
+                display: none;
+                grid-template-columns: 1fr;
+            }
+
+            .filters-content.active {
+                display: grid;
+            }
+
+            .filter-actions {
+                flex-direction: column;
+            }
+
+            .btn-filter,
+            .btn-reset {
+                width: 100%;
+            }
+
+            .view-list .poetry-card {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+   <!-- Page Header -->
+<div class="page-header">
+    <div class="container">
+        <h1 class="page-title">Sabhi Kavitayein</h1>
+        <p class="page-subtitle">Hindi sahitya ki sundar kavitaon ka sangrah</p>
+    </div>
+</div>
+
+
+    <!-- Main Content -->
+    <main class="container" style="padding-bottom: 80px;">
+        <!-- Filters Section -->
+        <div class="filters-section">
+            <div class="filters-header">
+                <h3><i class="fas fa-filter"></i> फ़िल्टर और सॉर्ट करें</h3>
+                <button class="filters-toggle" id="filtersToggle">
+                    <i class="fas fa-sliders-h"></i> फ़िल्टर दिखाएं
+                </button>
+            </div>
+            
+            <div class="filters-content" id="filtersContent">
+                <div class="filter-group">
+                    <label for="genre">शैली</label>
+                    <select id="genre">
+                        <option value="">सभी</option>
+                        <option value="romance">रोमांस</option>
+                        <option value="social">सामाजिक</option>
+                        <option value="political">राजनीतिक</option>
+                        <option value="motivational">प्रेरक</option>
+                        <option value="love">प्रेम</option>
+                        <option value="life">जीवन</option>
+                        <option value="sadness">उदासी</option>
+                        <option value="nature">प्रकृति</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="author">कवि</label>
+                    <select id="author">
+                        <option value="">सभी कवि</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="sortBy">क्रमबद्ध करें</label>
+                    <select id="sortBy">
+                        <option value="date-new">नवीनतम</option>
+                        <option value="date-old">पुरानी</option>
+                        <option value="popular">लोकप्रिय</option>
+                        <option value="title-asc">शीर्षक (अ - ह)</option>
+                        <option value="title-desc">शीर्षक (ह - अ)</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="searchPoetry">खोजें</label>
+                    <input type="text" id="searchPoetry" placeholder="शीर्षक या कवि से खोजें...">
+                </div>
+            </div>
+
+            <div class="filter-actions">
+                <button class="btn-filter" id="applyFilters">फ़िल्टर लागू करें</button>
+                <button class="btn-reset" id="resetFilters">रीसेट करें</button>
+            </div>
+        </div>
+
+        <!-- Results Info and View Toggle -->
+        <div class="results-info">
+            <div class="results-count" id="resultsCount">सभी कविताएं (15)</div>
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="grid" title="Grid View">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="view-btn" data-view="list" title="List View">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Poetry Grid -->
+        <div class="writers-grid view-grid" id="poetryGrid">
+            <!-- Poetry cards will be loaded here dynamically -->
+        </div>
+
+        <!-- No Results Message (hidden by default) -->
+        <div class="no-results" id="noResults" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>कोई परिणाम नहीं मिला</h3>
+            <p>कृपया अन्य फ़िल्टर का प्रयास करें</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Custom JavaScript -->
+    <script src="header-loader.js"></script>
+    <script src="script.js"></script>
+    <script src="kavita.js"></script>
+</body>
+</html>

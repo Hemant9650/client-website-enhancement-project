@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>हिंदी और उर्दू कवि, शायर और लेखक संग्रह | शेर-शराबा</title>
+    <meta name="title" content="हिंदी और उर्दू कवि, शायर और लेखक संग्रह | शेर-शराबा">
+    <meta name="description" content="प्रसिद्ध हिंदी कवियों, उर्दू शायरों और लेखकों का पूर्ण संग्रह। पढ़ें उनकी जीवनी, रचनाएं और साहित्यिक योगदान।">
+    <meta name="keywords" content="हिंदी कवि, उर्दू शायर, लेखक संग्रह, कवि जीवनी, शायर जीवनी, Hindi poets, Urdu shayars, writers directory">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="हिंदी और उर्दू कवि एवं लेखक | शेर-शराबा">
+    <meta property="og:description" content="प्रसिद्ध कवियों, शायरों की जीवनी और रचनाएं।">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://shersharaba.com/all-writers.html">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, rgba(99, 4, 118, 0.9), rgba(123, 45, 158, 0.9)), 
+                        url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=1200') center/cover;
+            padding: 80px 0 60px;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1516534775068-ba3e7458af70?w=1200') center/cover;
+            opacity: 0.15;
+            animation: subtle-zoom 20s ease-in-out infinite alternate;
+        }
+        
+        @keyframes subtle-zoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        .page-title {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-subtitle {
+            font-size: 18px;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .filters-section {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .filters-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .filters-header h3 {
+            font-size: 22px;
+            color: var(--dark-text);
+        }
+
+        .filters-toggle {
+            background: var(--primary-pink);
+            color: var(--accent-pink);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            display: none;
+        }
+
+        .filters-toggle:hover {
+            background: var(--accent-pink);
+            color: var(--white);
+        }
+
+        .filters-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            color: var(--dark-text);
+            font-size: 14px;
+        }
+
+        .filter-group select,
+        .filter-group input {
+            padding: 10px 15px;
+            border: 2px solid var(--rose-pink);
+            border-radius: 10px;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 14px;
+            color: var(--dark-text);
+            background: var(--cream);
+            transition: var(--transition);
+        }
+
+        .filter-group select:focus,
+        .filter-group input:focus {
+            outline: none;
+            border-color: var(--accent-pink);
+            background: var(--white);
+        }
+
+        .filter-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-filter {
+            background: linear-gradient(135deg, var(--accent-pink), var(--deep-rose));
+            color: var(--white);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .btn-filter:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px var(--shadow);
+        }
+
+        .btn-reset {
+            background: var(--white);
+            color: var(--accent-pink);
+            border: 2px solid var(--accent-pink);
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .btn-reset:hover {
+            background: var(--accent-pink);
+            color: var(--white);
+        }
+
+        .results-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .results-count {
+            color: var(--medium-text);
+            font-weight: 600;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 5px 25px var(--shadow);
+        }
+
+        .no-results i {
+            font-size: 60px;
+            color: var(--rose-pink);
+            margin-bottom: 20px;
+        }
+
+        .no-results h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--dark-text);
+        }
+
+        .no-results p {
+            color: var(--medium-text);
+        }
+
+        .writers-section {
+            padding: 0 0 80px;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 32px;
+            }
+
+            .filters-toggle {
+                display: block;
+            }
+
+            .filters-content {
+                display: none;
+                grid-template-columns: 1fr;
+            }
+
+            .filters-content.active {
+                display: grid;
+            }
+
+            .filter-actions {
+                flex-direction: column;
+            }
+
+            .btn-filter,
+            .btn-reset {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+   <!-- Page Header -->
+<section class="page-header" style="background: linear-gradient(135deg, rgba(99, 4, 118, 0.9), rgba(123, 45, 158, 0.9)), url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=1200') center/cover;">
+    <div class="container">
+        <h1 class="page-title">Sabhi Lekhak</h1>
+        <p class="page-subtitle">Hamare pratibhashali lekhakon se milein</p>
+    </div>
+</section>
+
+
+    <!-- Writers Section -->
+    <section class="writers-section">
+        <div class="container">
+            <!-- Filters Section -->
+            <div class="filters-section">
+                <div class="filters-header">
+                    <h3><i class="fas fa-filter"></i> फ़िल्टर और सॉर्ट करें</h3>
+                    <button class="filters-toggle" id="filtersToggle">
+                        <i class="fas fa-sliders-h"></i> फ़िल्टर दिखाएं
+                    </button>
+                </div>
+                
+                <div class="filters-content" id="filtersContent">
+                    <div class="filter-group">
+                        <label for="writerType">लेखक प्रकार</label>
+                        <select id="writerType">
+                            <option value="">सभी</option>
+                            <option value="kavi">कवि</option>
+                            <option value="kahanikaar">कहानीकार</option>
+                            <option value="others">अन्य</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="genre">विधा/शैली</label>
+                        <select id="genre">
+                            <option value="">सभी</option>
+                            <option value="romance">रोमांस</option>
+                            <option value="social">सामाजिक</option>
+                            <option value="political">राजनीतिक</option>
+                            <option value="motivational">प्रेरक</option>
+                            <option value="love">प्रेम</option>
+                            <option value="life">जीवन</option>
+                            <option value="sadness">उदासी</option>
+                            <option value="nature">प्रकृति</option>
+                            <option value="shayari">शायरी</option>
+                            <option value="awareness">जागरूकता</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sortBy">क्रमबद्ध करें</label>
+                        <select id="sortBy">
+                            <option value="name-asc">नाम (अ - ह)</option>
+                            <option value="name-desc">नाम (ह - अ)</option>
+                            <option value="popular">लोकप्रिय</option>
+                            <option value="works-high">रचनाएं (अधिक)</option>
+                            <option value="works-low">रचनाएं (कम)</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="searchWriter">खोजें</label>
+                        <input type="text" id="searchWriter" placeholder="नाम या स्थान से खोजें...">
+                    </div>
+                </div>
+
+                <div class="filter-actions">
+                    <button class="btn-filter" id="applyFilters">फ़िल्टर लागू करें</button>
+                    <button class="btn-reset" id="resetFilters">रीसेट करें</button>
+                </div>
+            </div>
+
+           <!-- Results Info -->
+<div class="results-info">
+    <div class="results-count" id="resultsCount">Sabhi Lekhak (3)</div>
+</div>
+
+<!-- Tabs -->
+<div class="tabs">
+    <button class="tab-btn active" data-tab="all-lekhak">Sabhi Lekhak</button>
+    <button class="tab-btn" data-tab="kavi">Kavi</button>
+    <button class="tab-btn" data-tab="kahanikaar">Kahanikaar</button>
+    <button class="tab-btn" data-tab="others">Anya</button>
+</div>
+
+
+            <!-- View Toggle -->
+            <div class="view-toggle" style="margin: 20px 0;">
+                <button class="view-btn active" data-view="grid" title="Grid View">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="view-btn" data-view="list" title="List View">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+
+            <!-- All Lekhak Tab -->
+            <div class="tab-content active" id="all-lekhak">
+                <div class="writers-grid view-grid" id="allLekhakGrid">
+                    <!-- Kavi -->
+                    <a href="kavi-detail.html?id=1" class="writer-card-link">
+                        <div class="writer-card">
+                            <div class="writer-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="राज कुमार">
+                            </div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">राज कुमार</h3>
+                                <span class="writer-badge"><i class="fas fa-pen-fancy"></i> कवि</span>
+                                <div class="writer-tags">
+                                    <span class="tag">रोमांस</span>
+                                    <span class="tag">प्रेम</span>
+                                    <span class="tag">उदासी</span>
+                                </div>
+                                <p class="writer-location"><i class="fas fa-map-marker-alt"></i> फरीदाबाद, हरियाणा</p>
+                                <p class="writer-excerpt">"जब दिल से निकले एक आहट, और होंठों पर आए मुस्कान..."</p>
+                                <div class="writer-stats">
+                                    <span title="रचनाएं"><i class="fas fa-book"></i> 45 कविताएं</span>
+                                    <span title="पसंद"><i class="fas fa-heart"></i> 1250</span>
+                                    <span title="दृश्य"><i class="fas fa-eye"></i> 8500</span>
+                                </div>
+                                <span class="btn-view-profile">पढ़ें <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Kahanikaar -->
+                    <a href="kahanikaar-detail.html?id=1" class="writer-card-link">
+                        <div class="writer-card">
+                            <div class="writer-avatar">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" alt="अरुण शर्मा">
+                            </div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">अरुण शर्मा</h3>
+                                <span class="writer-badge"><i class="fas fa-book-open"></i> कहानीकार</span>
+                                <div class="writer-tags">
+                                    <span class="tag">सामाजिक</span>
+                                    <span class="tag">जागरूकता</span>
+                                    <span class="tag">प्रेरक</span>
+                                </div>
+                                <p class="writer-location"><i class="fas fa-map-marker-alt"></i> दिल्ली</p>
+                                <p class="writer-excerpt">"हर कहानी में छुपा होता है जीवन का सच..."</p>
+                                <div class="writer-stats">
+                                    <span title="रचनाएं"><i class="fas fa-book"></i> 28 कहानियां</span>
+                                    <span title="पसंद"><i class="fas fa-heart"></i> 890</span>
+                                    <span title="दृश्य"><i class="fas fa-eye"></i> 5600</span>
+                                </div>
+                                <span class="btn-view-profile">पढ़ें <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Others -->
+                    <a href="kavi-detail.html?id=3" class="writer-card-link">
+                        <div class="writer-card">
+                            <div class="writer-avatar">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400" alt="राहुल मेहता">
+                            </div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">राहुल मेहता</h3>
+                                <span class="writer-badge"><i class="fas fa-feather"></i> लेखक</span>
+                                <div class="writer-tags">
+                                    <span class="tag">शायरी</span>
+                                    <span class="tag">लेख</span>
+                                    <span class="tag">समीक्षा</span>
+                                </div>
+                                <p class="writer-location"><i class="fas fa-map-marker-alt"></i> मुंबई</p>
+                                <p class="writer-excerpt">"शब्दों में बयान है ज़िन्दगी की दास्तान..."</p>
+                                <div class="writer-stats">
+                                    <span title="रचनाएं"><i class="fas fa-book"></i> 35 रचनाएं</span>
+                                    <span title="पसंद"><i class="fas fa-heart"></i> 670</span>
+                                    <span title="दृश्य"><i class="fas fa-eye"></i> 4200</span>
+                                </div>
+                                <span class="btn-view-profile">पढ़ें <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kavi Tab -->
+            <div class="tab-content" id="kavi">
+                <div class="writers-grid view-grid" id="kaviGrid">
+                    <a href="kavi-detail.html?id=1" class="writer-card-link">
+                        <div class="writer-card">
+                            <div class="writer-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="राज कुमार">
+                            </div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">राज कुमार</h3>
+                                <span class="writer-badge"><i class="fas fa-pen-fancy"></i> कवि</span>
+                                <div class="writer-tags">
+                                    <span class="tag">रोमांस</span>
+                                    <span class="tag">प्रेम</span>
+                                    <span class="tag">उदासी</span>
+                                </div>
+                                <p class="writer-location"><i class="fas fa-map-marker-alt"></i> फरीदाबाद, हरियाणा</p>
+                                <p class="writer-excerpt">"जब दिल से निकले एक आहट, और होंठों पर आए मुस्कान..."</p>
+                                <div class="writer-stats">
+                                    <span title="रचनाएं"><i class="fas fa-book"></i> 45 कविताएं</span>
+                                    <span title="पसंद"><i class="fas fa-heart"></i> 1250</span>
+                                    <span title="दृश्य"><i class="fas fa-eye"></i> 8500</span>
+                                </div>
+                                <span class="btn-view-profile">पढ़ें <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kahanikaar Tab -->
+            <div class="tab-content" id="kahanikaar">
+                <div class="writers-grid view-grid" id="kahanikaarGrid">
+                    <a href="kahanikaar-detail.html?id=1" class="writer-card-link">
+                        <div class="writer-card">
+                            <div class="writer-avatar">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" alt="अरुण शर्मा">
+                            </div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">अरुण शर्मा</h3>
+                                <span class="writer-badge"><i class="fas fa-book-open"></i> कहानीकार</span>
+                                <div class="writer-tags">
+                                    <span class="tag">सामाजिक</span>
+                                    <span class="tag">जागरूकता</span>
+                                    <span class="tag">प्रेरक</span>
+                                </div>
+                                <p class="writer-location"><i class="fas fa-map-marker-alt"></i> दिल्ली</p>
+                                <p class="writer-excerpt">"हर कहानी में छुपा होता है जीवन का सच..."</p>
+                                <div class="writer-stats">
+                                    <span title="रचनाएं"><i class="fas fa-book"></i> 28 कहानियां</span>
+                                    <span title="पसंद"><i class="fas fa-heart"></i> 890</span>
+                                    <span title="दृश्य"><i class="fas fa-eye"></i> 5600</span>
+                                </div>
+                                <span class="btn-view-profile">पढ़ें <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Others Tab -->
+            <div class="tab-content" id="others">
+                <div class="writers-grid view-grid" id="othersGrid">
+                    <a href="kavi-detail.html?id=3" class="writer-card-link">
+                        <div class="writer-card">
+                            <div class="writer-avatar">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400" alt="राहुल मेहता">
+                            </div>
+                            <div class="writer-info">
+                                <h3 class="writer-name">राहुल मेहता</h3>
+                                <span class="writer-badge"><i class="fas fa-feather"></i> लेखक</span>
+                                <div class="writer-tags">
+                                    <span class="tag">शायरी</span>
+                                    <span class="tag">लेख</span>
+                                    <span class="tag">समीक्षा</span>
+                                </div>
+                                <p class="writer-location"><i class="fas fa-map-marker-alt"></i> मुंबई</p>
+                                <p class="writer-excerpt">"शब्दों में बयान है ज़िन्दगी की दास्तान..."</p>
+                                <div class="writer-stats">
+                                    <span title="रचनाएं"><i class="fas fa-book"></i> 35 रचनाएं</span>
+                                    <span title="पसंद"><i class="fas fa-heart"></i> 670</span>
+                                    <span title="दृश्य"><i class="fas fa-eye"></i> 4200</span>
+                                </div>
+                                <span class="btn-view-profile">पढ़ें <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- No Results Message (hidden by default) -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>कोई परिणाम नहीं मिला</h3>
+                <p>कृपया अन्य फ़िल्टर का प्रयास करें</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="header-loader.js"></script>
+    <script src="script.js"></script>
+    <script src="all-writers.js"></script>
+</body>
+</html>

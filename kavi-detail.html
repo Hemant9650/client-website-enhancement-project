@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>कवि विवरण | हिंदी और उर्दू कवि की जीवनी और रचनाएं | शेर-शराबा</title>
+    <meta name="description" content="हिंदी और उर्दू कवि की पूर्ण जीवनी, साहित्यिक योगदान और प्रमुख रचनाएं। पढ़ें कवि की कविताएं, गजल और शायरी।">
+    <meta name="keywords" content="हिंदी कवि, उर्दू शायर, कवि जीवनी, शायर की रचनाएं, कविता संग्रह, गजल">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Writer Detail Section -->
+    <section class="writer-detail-section">
+        <div class="container">
+            <div class="writer-detail-container">
+                <!-- Writer Profile -->
+                <div class="writer-profile-card">
+                    <div class="writer-image-container">
+                        <img id="writerImage" src="" alt="कवि की छवि" class="writer-image">
+                        <div class="writer-badge">
+                            <i class="fas fa-pen-fancy"></i>
+                            <span>कवि</span>
+                        </div>
+                    </div>
+                    
+                    <div class="writer-info">
+                        <h1 id="writerName" class="writer-name">कवि का नाम</h1>
+                        <div class="writer-meta">
+                            <span class="writer-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span id="writerLocation">स्थान</span>
+                            </span>
+                            <span class="writer-dob">
+                                <i class="fas fa-birthday-cake"></i>
+                                <span id="writerDOB">जन्म तिथि</span>
+                            </span>
+                            <span class="writer-experience">
+                                <i class="fas fa-clock"></i>
+                                <span id="writerExperience">अनुभव</span>
+                            </span>
+                        </div>
+                        
+                        <div class="writer-genres">
+                            <h3>पसंदीदा शैलियाँ:</h3>
+                            <div id="writerGenres" class="genre-tags"></div>
+                        </div>
+                        
+                        <div class="writer-bio">
+                            <h3>परिचय:</h3>
+                            <p id="writerBio">कवि का परिचय यहां दिखाया जाएगा...</p>
+                        </div>
+
+                        <div class="writer-social">
+                            <h3>सोशल मीडिया:</h3>
+                            <div class="social-links" id="writerSocial">
+                                <!-- Social links will be added dynamically -->
+                            </div>
+                        </div>
+
+                        <div class="writer-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-book"></i>
+                                <div>
+                                    <strong id="totalPoems">0</strong>
+                                    <span>कविताएं</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-heart"></i>
+                                <div>
+                                    <strong id="totalLikes">0</strong>
+                                    <span>पसंद</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-eye"></i>
+                                <div>
+                                    <strong id="totalViews">0</strong>
+                                    <span>दृश्य</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Writer's Poems -->
+                <div class="writer-works-section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-feather-alt"></i>
+                            रचनाएं
+                        </h2>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">सभी</button>
+                            <button class="filter-btn" data-filter="recent">नवीनतम</button>
+                            <button class="filter-btn" data-filter="popular">लोकप्रिय</button>
+                        </div>
+                    </div>
+
+                    <div id="poemsGrid" class="poems-grid">
+                        <!-- Poems will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Related Writers Section -->
+                <div class="related-writers-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-users"></i>
+                        समान विधा के लेखक
+                    </h2>
+                    <div id="relatedWritersGrid" class="writers-grid view-grid">
+                        <!-- Related writers will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="header-loader.js"></script>
+    <script src="kavi-detail.js"></script>
+</body>
+</html>

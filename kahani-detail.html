@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>कहानी विवरण | हिंदी और उर्दू कहानी, अफ़साना | शेर-शराबा</title>
+    <meta name="description" content="पढ़ें हिंदी और उर्दू की रोचक कहानियां और अफ़साने। देवनागरी लिपि में प्रसिद्ध लेखकों की बेहतरीन कहानियां।">
+    <meta name="keywords" content="हिंदी कहानी, उर्दू अफ़साना, लघु कथा, देवनागरी में कहानी, Hindi story, Urdu afsana">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--accent-pink), var(--deep-rose));
+            padding: 40px 0 30px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            opacity: 0.7;
+        }
+
+        .detail-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        .story-detail-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 5px 25px var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .story-detail-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--cream);
+        }
+
+        .story-detail-title {
+            font-size: 36px;
+            color: var(--dark-text);
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .story-author-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .author-link {
+            color: var(--accent-pink);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .author-link:hover {
+            text-decoration: underline;
+        }
+
+        .story-genre-badge {
+            background: linear-gradient(135deg, var(--accent-pink), var(--deep-rose));
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .story-meta-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .meta-stat {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--medium-text);
+            font-size: 15px;
+        }
+
+        .meta-stat i {
+            color: var(--accent-pink);
+            font-size: 18px;
+        }
+
+        .story-content {
+            font-size: 17px;
+            line-height: 1.9;
+            color: var(--dark-text);
+            white-space: pre-line;
+            text-align: justify;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: var(--cream);
+            border-radius: 15px;
+        }
+
+        .story-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn-action {
+            background: var(--white);
+            color: var(--accent-pink);
+            border: 2px solid var(--accent-pink);
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-action:hover {
+            background: var(--accent-pink);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .btn-action.liked {
+            background: var(--accent-pink);
+            color: var(--white);
+        }
+
+        .related-section {
+            margin-top: 50px;
+        }
+
+        .related-title {
+            font-size: 28px;
+            color: var(--dark-text);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .related-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 3px 15px var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(99, 4, 118, 0.3);
+        }
+
+        .related-card-title {
+            font-size: 20px;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .related-card-author {
+            color: var(--medium-text);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .related-card-excerpt {
+            color: var(--medium-text);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .story-detail-card {
+                padding: 25px;
+            }
+
+            .story-detail-title {
+                font-size: 28px;
+            }
+
+            .story-content {
+                font-size: 16px;
+                padding: 20px;
+            }
+
+            .story-actions {
+                flex-direction: column;
+            }
+
+            .btn-action {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">होम</a>
+                <span><i class="fas fa-chevron-right"></i></span>
+                <a href="kahani.html">कहानियां</a>
+                <span><i class="fas fa-chevron-right"></i></span>
+                <span id="breadcrumbTitle">कहानी</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="detail-container">
+        <div class="story-detail-card">
+            <div class="story-detail-header">
+                <h1 class="story-detail-title" id="storyTitle">लोड हो रहा है...</h1>
+                
+                <div class="story-author-info">
+                    <a href="#" class="author-link" id="authorLink">
+                        <i class="fas fa-user"></i>
+                        <span id="storyAuthor">लेखक</span>
+                    </a>
+                    <span class="story-genre-badge" id="storyGenre">शैली</span>
+                </div>
+
+                <div class="story-meta-stats">
+                    <div class="meta-stat">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span id="storyDate">तारीख</span>
+                    </div>
+                    <div class="meta-stat">
+                        <i class="fas fa-eye"></i>
+                        <span id="storyViews">0</span>
+                    </div>
+                    <div class="meta-stat">
+                        <i class="fas fa-heart"></i>
+                        <span id="storyLikes">0</span>
+                    </div>
+                    <div class="meta-stat">
+                        <i class="fas fa-star"></i>
+                        <span id="storyRating">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-content" id="storyContent">
+                कहानी की सामग्री लोड हो रही है...
+            </div>
+
+            <div class="story-actions">
+                <button class="btn-action" id="btnLike">
+                    <i class="fas fa-heart"></i>
+                    <span>पसंद करें</span>
+                </button>
+                <button class="btn-action" id="btnShare">
+                    <i class="fas fa-share-alt"></i>
+                    <span>साझा करें</span>
+                </button>
+                <button class="btn-action" id="btnSave">
+                    <i class="fas fa-bookmark"></i>
+                    <span>सहेजें</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Related Stories Section -->
+        <div class="related-section">
+            <h2 class="related-title">संबंधित कहानियां</h2>
+            <div class="related-grid" id="relatedGrid">
+                <!-- Related stories will be loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Custom JavaScript -->
+    <script src="header-loader.js"></script>
+    <script src="script.js"></script>
+    <script src="kahani-detail.js"></script>
+</body>
+</html>
